@@ -1,0 +1,49 @@
+/* Styling of robot (BEEZEE) */
+div#beezee_container {
+  border: 2px solid white;
+  width: 50%;
+  height: 50%;
+
+  /* Placing robot in center, both ver. and hor. */
+  position: fixed; /*it can be absolute too*/
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+
+  max-width:100%;
+  max-height:100%;
+}
+
+/* Container of eyes */
+div#eyes_container {
+  /* Make into grid with 2 col */
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#left_eye, #right_eye {
+  background-color: green;
+  padding: 2em;
+  margin: 2em 4em 5em 4em;
+  text-align: center;
+}
+
+/* Container of mouth */
+div#mouth_container {
+  /* Make into flex-box */
+  display: flex;
+  flex-direction: row;
+}
+
+div.tooth {
+  /* Distribute width over all tooth */
+  flex: 1;
+
+  /* TODO: Positioning tooth at bottom of beezee_container */
+
+
+  padding: 2em;
+  border: 2px solid white;
+}

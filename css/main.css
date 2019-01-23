@@ -1,13 +1,9 @@
+/* Import other CSS  */
+@import url("beezee.css");
+
 /* Main screen styling */
 body {
   background-color: black;
   font-family: fantasy;
   color: white;
-}
-
-/* Styling of robot (BEEZEE) */
-div#beezee_frame {
-  border: 2px solid white;
-  width: 50%;
-  margin: auto;
 }
