@@ -1,6 +1,9 @@
 /* Start screen styling */
 
+/* TODO: Center instructions hor. and ver. */
+
 html, body {
+  font-size: 22px;
   background-color: black;
   font-family: monospace;
   color: white;
@@ -8,4 +11,8 @@ html, body {
   min-height: 100%;
 
   cursor: none !important;
+}
+
+#instruction_container {
+  margin: 20%;
 }
