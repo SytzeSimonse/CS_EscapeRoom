@@ -1,0 +1,11 @@
+/* Start screen styling */
+
+html, body {
+  background-color: black;
+  font-family: monospace;
+  color: white;
+
+  min-height: 100%;
+
+  cursor: none !important;
+}
