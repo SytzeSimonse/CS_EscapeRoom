@@ -1,7 +1,3 @@
-<?php
-echo "test";
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,7 +15,7 @@ echo "test";
         <li>Enable fullscreen mode</li>
         <li>Set a duration (default: 45 minutes)</li>
       </ul>
-      <form class="" action="index.html" method="post">
+      <form class="" action="login.php" method="post">
         Duration (in minutes):<br>
         <input type="range" name="duration" min="30" max="90" value="45">
       </form>

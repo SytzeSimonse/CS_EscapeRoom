@@ -1,0 +1,14 @@
+/* CSS of login portal. */
+
+html, body {
+  font-size: 22px;
+  background-color: black;
+  font-family: monospace;
+  color: white;
+
+  min-height: 100%;
+}
+
+#login-portal_container {
+  margin: 20%;
+}

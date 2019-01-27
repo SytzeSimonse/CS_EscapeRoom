@@ -13,7 +13,9 @@
 
       <!-- FRAME eyes -->
       <div id="eyes_container">
-        <div id="left_eye">Left</div>
+        <a href="portal.php">
+          <div id="left_eye">Left GG</div>
+        </a>
         <div id="right_eye">Right</div>
       </div>
 

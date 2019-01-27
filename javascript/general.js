@@ -23,4 +23,4 @@ function playMorse(intervalMinutes,audioFile) {
 }
 
 // Play morse every 2 minutes.
-playMorse(0.5,"sources/morse.wav");
+playMorse(2,"resources/morse.wav");
