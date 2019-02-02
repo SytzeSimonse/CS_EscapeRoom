@@ -47,3 +47,17 @@ div.tooth {
   padding: 2em;
   border: 2px solid white;
 }
+
+/* Different tooth classes (A,B,C) give a different color. */
+/* These classes are used to switch between. */
+.toothA {
+  background-color: red;
+}
+
+.toothB {
+  background-color: blue;
+}
+
+.toothC {
+  background-color: yellow;
+}

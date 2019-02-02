@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Start</title>
     <link rel="stylesheet" href="css/start.css">
+
+    <!-- Include JQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Include external scripts -->
     <script src="javascript/start.js"></script>
   </head>
   <body>
