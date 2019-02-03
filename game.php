@@ -33,7 +33,7 @@
       </div>
 
       <div id="timer_container">
-        <p id="timer">TIMER</p>
+        <p id="timer">2:00</p>
       </div>
 
       <!-- FRAME mouth -->
