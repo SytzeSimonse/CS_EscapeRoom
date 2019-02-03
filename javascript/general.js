@@ -26,7 +26,7 @@ $(function() {
   // @endText string: Text to display when timer reaches zero.
   var timeoutHandle;
   function countdown(minutes,endText) {
-      var seconds = 5;
+      var seconds = 60;
       var mins = minutes
       function tick() {
           var timer = document.getElementById("timer")
@@ -48,7 +48,7 @@ $(function() {
       }
       tick();
   }
-  countdown(1,"GAME OVER");
+  countdown(60,"GAME OVER");
 
   // End of JQuery document ready function.
 });

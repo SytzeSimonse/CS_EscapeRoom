@@ -30,6 +30,22 @@ div#eyes_container {
   text-align: center;
 }
 
+/* Timer */
+div#timer_container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+div#timer {
+  text-align: center;
+  font-size: 36px;
+  background-color: var(--grijs-blauw);
+  font-family: Digital7Mono;
+  margin: 1em 4em 2em 4em;
+  height: 2em;
+  line-height: 2em;
+}
+
 /* Container of mouth */
 div#mouth_container {
   /* Make into flex-box */

@@ -1,9 +1,24 @@
-/* Import other CSS  */
+/* Import other CSS files.  */
 @import url("beezee.css");
 
-/* Main screen styling */
+/* Use custom fonts (downloaded). */
+@font-face {
+  font-family: Digital7Mono;
+  src: url('../fonts/Digital7-mono.ttf');
+}
+
+/* Save colors to variables. */
+:root {
+    --zwart:        #000500;
+    --paars:        #802392;
+    --rood:         #f22e2e;
+    --grijs-blauw:  #79c7c5;
+    --grijs-licht:  #ade1e5;
+}
+
+/* Main screen styling. */
 body {
-  background-color: black;
+  background-color: var(--zwart);
   font-family: monospace;
   color: white;
 }
