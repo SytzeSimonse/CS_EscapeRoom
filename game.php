@@ -21,6 +21,12 @@
   </head>
   <body>
 
+    <!-- The escape room timer -->
+    <div id="timer_container">
+      <div>Time left:</div>
+      <div id="timer">2:00</div>
+    </div>
+
     <!-- Create BEE_ZEE (the robot) -->
     <div id="beezee_container">
 
@@ -30,10 +36,6 @@
           <div id="left_eye">Left GG</div>
         </a>
         <div id="right_eye">Right</div>
-      </div>
-
-      <div id="timer_container">
-        <div id="timer">2:00</div>
       </div>
 
       <!-- FRAME mouth -->
