@@ -59,7 +59,6 @@ div.tooth {
 
   /* TODO: Positioning tooth at bottom of beezee_container */
 
-
   padding: 2em;
   border: 2px solid white;
 }
@@ -75,5 +74,17 @@ div.tooth {
 }
 
 .toothC {
+  background-color: green;
+}
+
+.toothD {
   background-color: yellow;
+}
+
+.toothE {
+  background-color: cyan;
+}
+
+.toothF {
+  background-color: magenta;
 }

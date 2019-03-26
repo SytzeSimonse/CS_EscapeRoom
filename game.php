@@ -38,7 +38,7 @@
 
       <!-- FRAME mouth -->
       <div id="mouth_container">
-        <div class="tooth toothA" id="tooth1"></div>
+        <div class="tooth" id="tooth1"></div>
         <div class="tooth" id="tooth2"></div>
         <div class="tooth" id="tooth3"></div>
         <div class="tooth" id="tooth4"></div>
@@ -46,6 +46,8 @@
         <div class="tooth" id="tooth6"></div>
         <div class="tooth" id="tooth7"></div>
         <div class="tooth" id="tooth8"></div>
+        <div class="tooth" id="tooth9"></div>
+        <div class="tooth" id="tooth10"></div>
       </div>
 
     </div>

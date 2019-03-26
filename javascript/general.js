@@ -1,7 +1,9 @@
 // Show message when user wants to go to another page, i.e. ending the game.
+/*
 window.onbeforeunload = function(){
   return 'Are you sure you want to leave? The game will be stopped.';
 };
+*/
 
 // Place all code in JQuery 'ready'.
 $(function() {
@@ -50,26 +52,40 @@ $(function() {
   }
   countdown(60,"GAME OVER");
 
+  // Check if all conditions are met to open portal (backdoor).
+
+  // Define variables for opening backdoor.
+  // - tooth_broken: Right combination of tooth is given.
+  // - keyboard_broken: Right keyboard key is pressed.
+  // - eye_broken: Right amount of times the eye is clicked.
+  var tooth_broken = true;
+  var keyboard_broken = true;
+  var eye_broken = false;
+
+  // Put all variables in one array.
+  var backdoor_conditions = [
+    tooth_broken,
+    keyboard_broken,
+    eye_broken
+  ]
+
+  // Function: checkTrue. Checks if a Boolean is true.
+  // @boolean boolean: Boolean which is checked.
+  function checkTrue(boolean) {
+    return boolean == true;
+  }
+
+  // Check if all backdoor conditions are met (true).
+  function backdoorOpen() {
+    if (backdoor_conditions.every(checkTrue)) {
+      window.location.replace("portal.php");
+    } else {
+      alert("Nope...");
+      return false;
+    }
+  }
+
+  //window.setInterval(backdoorOpen, 5000);
+
   // End of JQuery document ready function.
 });
-
-// // Show
-// var count = 60 * 60;
-//
-// var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
-//
-// function timer()
-// {
-//   count = count-1;
-//
-//   if (count <= 0)
-//   {
-//      clearInterval(counter);
-//      //counter ended, do something here
-//      alert("GAME OVER");
-//   }
-//
-//   //Do code for showing the number of seconds here
-//   // document.getElementById("timer").innerHTML = counter.toString();
-//   document.getElementById("timer").innerHTML = String(count);
-// }
