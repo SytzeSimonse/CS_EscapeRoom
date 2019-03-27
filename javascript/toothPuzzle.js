@@ -60,6 +60,7 @@ $(function() {
       teethCombinationCorrect = true;
       tooth_broken = true;
       new Audio("resources/toothUnlocked.wav").play();
+      backdoor_conditions[0] = true;
       setTimeout(function(){
         new Audio("resources/speech.mp3").play();
       }, 1000);

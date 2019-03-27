@@ -17,8 +17,11 @@
 
     <!-- Include external scripts -->
     <script type="text/javascript" src="javascript/general.js"></script>
-    <script type="text/javascript" src="javascript/tooth.js"></script>
-    <script type="text/javascript" src="javascript/keyboardCombination.js"></script>
+
+    <!-- Include puzzle scripts -->
+    <script type="text/javascript" src="javascript/toothPuzzle.js"></script>
+    <script type="text/javascript" src="javascript/keyboardPuzzle.js"></script>
+    <script type="text/javascript" src="javascript/eyePuzzle.js"></script>
 
   </head>
   <body>
@@ -34,9 +37,7 @@
 
       <!-- FRAME eyes -->
       <div id="eyes_container">
-        <a href="portal.php">
-          <div id="left_eye">Left GG</div>
-        </a>
+        <div id="left_eye">Left</div>
         <div id="right_eye">Right</div>
       </div>
 

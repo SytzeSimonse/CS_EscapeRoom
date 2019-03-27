@@ -5,6 +5,7 @@ $(document).keydown(function(e) {
     map[e.keyCode] = true;
     if (map[18] && map[79] && map[107]) {
       new Audio("resources/toothUnlocked.wav").play();
+      backdoor_conditions[1] = true;
     }
   }
 }).keyup(function(e) {

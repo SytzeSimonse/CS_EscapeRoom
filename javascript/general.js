@@ -5,6 +5,21 @@ window.onbeforeunload = function(){
 };
 */
 
+// Define variables for opening backdoor.
+// - tooth_broken: Right combination of tooth is given.
+// - keyboard_broken: Right keyboard key is pressed.
+// - eye_broken: Right amount of times the eye is clicked.
+var tooth_broken = false;
+var keyboard_broken = false;
+var eye_broken = false;
+
+// Put all variables in one array.
+var backdoor_conditions = [
+  tooth_broken,
+  keyboard_broken,
+  eye_broken
+]
+
 // Place all code in JQuery 'ready'.
 $(function() {
 
@@ -54,21 +69,6 @@ $(function() {
 
   // Check if all conditions are met to open portal (backdoor).
 
-  // Define variables for opening backdoor.
-  // - tooth_broken: Right combination of tooth is given.
-  // - keyboard_broken: Right keyboard key is pressed.
-  // - eye_broken: Right amount of times the eye is clicked.
-  var tooth_broken = true;
-  var keyboard_broken = true;
-  var eye_broken = false;
-
-  // Put all variables in one array.
-  var backdoor_conditions = [
-    tooth_broken,
-    keyboard_broken,
-    eye_broken
-  ]
-
   // Function: checkTrue. Checks if a Boolean is true.
   // @boolean boolean: Boolean which is checked.
   function checkTrue(boolean) {
@@ -80,12 +80,11 @@ $(function() {
     if (backdoor_conditions.every(checkTrue)) {
       window.location.replace("portal.php");
     } else {
-      alert("Nope...");
       return false;
     }
   }
 
-  //window.setInterval(backdoorOpen, 5000);
+  window.setInterval(backdoorOpen, 1000);
 
   // End of JQuery document ready function.
 });
