@@ -18,12 +18,14 @@
     <!-- Include external scripts -->
     <script type="text/javascript" src="javascript/general.js"></script>
     <script type="text/javascript" src="javascript/tooth.js"></script>
+    <script type="text/javascript" src="javascript/keyboardCombination.js"></script>
+
   </head>
   <body>
 
     <!-- The escape room timer -->
     <div id="timer_container">
-      <div>Time left:</div>
+      <div>Time left</div>
       <div id="timer">2:00</div>
     </div>
 
