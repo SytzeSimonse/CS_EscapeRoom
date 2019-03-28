@@ -6,6 +6,9 @@ $(document).keydown(function(e) {
     if (map[18] && map[79] && map[107]) {
       new Audio("resources/toothUnlocked.wav").play();
       backdoor_conditions[1] = true;
+      $(document).ready(function() {
+        $("#light2").css("background-image", "radial-gradient(#ff3333,#e60000,#330000)");
+      });
     }
   }
 }).keyup(function(e) {

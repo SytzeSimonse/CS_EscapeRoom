@@ -75,16 +75,23 @@ $(function() {
     return boolean == true;
   }
 
+  var backdoorClosed = true;
+
   // Check if all backdoor conditions are met (true).
   function backdoorOpen() {
-    if (backdoor_conditions.every(checkTrue)) {
-      window.location.replace("portal.php");
+    if (backdoor_conditions.every(checkTrue) && backdoorClosed) {
+      new Audio("resources/access.mp3").play();
+      backdoorClosed = false;
+      alert("oke");
+      setTimeout(function() {
+        window.location.replace("portal.php");
+      }, 3000);
     } else {
       return false;
     }
   }
 
-  window.setInterval(backdoorOpen, 1000);
+  window.setInterval(backdoorOpen, 2000);
 
   // End of JQuery document ready function.
 });

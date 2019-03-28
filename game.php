@@ -26,6 +26,15 @@
   </head>
   <body>
 
+    <!-- The backdoor lights:
+    Every time a requirement is met to open the backdoor, a light switches on.
+  -->
+  <div id="light_container">
+    <div class="light" id="light1"></div>
+    <div class="light" id="light2"></div>
+    <div class="light" id="light3"></div>
+  </div>
+
     <!-- The escape room timer -->
     <div id="timer_container">
       <div>Time left</div>
@@ -33,7 +42,7 @@
     </div>
 
     <!-- Create BEE_ZEE (the robot) -->
-    <div id="beezee_container">
+    <div id="beezee_container" style="border: 2px solid gold">
 
       <!-- FRAME eyes -->
       <div id="eyes_container">

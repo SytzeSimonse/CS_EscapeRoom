@@ -9,7 +9,7 @@
 
 /* Save colors to variables. */
 :root {
-    --zwart:        #000500;
+    --achtergrond:  #1a1a1a;
     --paars:        #802392;
     --rood:         #f22e2e;
     --grijs-blauw:  grey;
@@ -18,7 +18,7 @@
 
 /* Main screen styling. */
 body {
-  background-color: var(--zwart);
+  background-color: var(--achtergrond);
   font-family: monospace;
   color: white;
 }
