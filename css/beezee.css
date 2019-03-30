@@ -5,7 +5,13 @@
 
 /* Styling of robot (BEEZEE) */
 div#beezee_container {
-  border: 0px solid white;
+  border: 1em solid black;
+  background-color: #404040;
+  background-image: url('../resources/metal2.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire */
+  box-shadow: 5px 10px 8px black;
   width: 50%;
   height: 50%;
 
@@ -24,14 +30,23 @@ div#beezee_container {
 /* Container of eyes */
 div#eyes_container {
   /* Make into grid with 2 col */
-  display: grid;
-  grid-template-columns: auto auto;
+
 }
 
-#left_eye, #right_eye {
-  background-color: green;
-  padding: 2em;
-  margin: 2em 4em 8em 4em;
+#left_eye {
+  float: left;
+}
+
+#right_eye {
+  float: right;
+}
+
+.eye {
+  background-image: radial-gradient(circle, white, #000066, #000066, #000066, #000066, #000066);
+  border: 0.5em solid black;
+  width: 7em;
+  height: 7em;
+  margin: 2em 9em 8em 9em;
   text-align: center;
 }
 
@@ -53,14 +68,14 @@ div#timer_container {
 }
 
 div#timer {
-  font-size: 4em;
+  font-size: 6em;
 }
 
 div#light_container {
   display: table;
   margin: 2em 0em 0em 2em;
-  border-collapse:separate;
-  border-spacing:1em;
+  border-collapse: separate;
+  border-spacing: 1em;
 }
 
 div.light {
@@ -75,9 +90,14 @@ div.light {
 
 /* Container of mouth */
 div#mouth_container {
-  /* Make into flex-box */
-  display: flex;
-  flex-direction: row;
+  /* Multiple column layout */
+  column-count: 5;
+  column-gap: 0;
+
+  position: absolute;
+  bottom: 0;
+
+  margin: auto;
 }
 
 div.tooth {
@@ -86,7 +106,7 @@ div.tooth {
 
   /* TODO: Positioning tooth at bottom of beezee_container */
 
-  padding: 2em;
+  padding: 3em;
   border: 2px solid white;
 }
 
@@ -114,4 +134,31 @@ div.tooth {
 
 .toothF {
   background-color: magenta;
+}
+
+#lostPuzzlePanel {
+  position: absolute;
+  top: 20%;
+  right: -0.2em;
+  width: 10%;
+  height: 30%;
+  background-color: red;
+  font-size: 3em;
+
+  border: 0.2em solid black;
+  background-color: #404040;
+  background-image: url('../resources/metal2.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire */
+  box-shadow: 5px 10px 8px black;
+}
+
+#arrowScreen {
+  border: 0.1em solid black;
+  width: 70%;
+  height: 40%;
+  background-color: blue;
+  margin: auto;
+  margin-top: 5%;
 }

@@ -1,10 +1,3 @@
-// Show message when user wants to go to another page, i.e. ending the game.
-/*
-window.onbeforeunload = function(){
-  return 'Are you sure you want to leave? The game will be stopped.';
-};
-*/
-
 // Define variables for opening backdoor.
 // - tooth_broken: Right combination of tooth is given.
 // - keyboard_broken: Right keyboard key is pressed.
@@ -37,35 +30,6 @@ $(function() {
 
   // Play Morse-code every 2 minutes.
   playMorse(2,"resources/morse.wav");
-
-  // Function: countdown. Counts down from 'minutes' to zero.
-  // @minutes int:    Amount of minutes to countdown from.
-  // @endText string: Text to display when timer reaches zero.
-  var timeoutHandle;
-  function countdown(minutes,endText) {
-      var seconds = 60;
-      var mins = minutes
-      function tick() {
-          var timer = document.getElementById("timer")
-          var current_minutes = mins-1
-          seconds--;
-          timer.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-          // Checks when timer reaches zero.
-          if (seconds < 1 && current_minutes < 1) {
-            alert(endText);
-          }
-          if (seconds > 0) {
-              timeoutHandle=setTimeout(tick, 1000);
-          } else {
-              if(mins > 1){
-                 // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
-                 setTimeout(function () { countdown(mins - 1); }, 1000);
-              }
-          }
-      }
-      tick();
-  }
-  countdown(60,"GAME OVER");
 
   // Check if all conditions are met to open portal (backdoor).
 
