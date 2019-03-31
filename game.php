@@ -36,7 +36,9 @@
   <body>
 
     <div id="countdown-timer-up">
-      test
+      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='20 0 60 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
+      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='30 0 70 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
+      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='40 0 80 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
     </div>
 
     <!-- The backdoor lights:
@@ -65,21 +67,24 @@
 
       <!-- FRAME mouth -->
       <div id="mouth_container">
-        <div class="tooth" id="tooth1"></div>
-        <div class="tooth" id="tooth2"></div>
-        <div class="tooth" id="tooth3"></div>
-        <div class="tooth" id="tooth4"></div>
-        <div class="tooth" id="tooth5"></div>
-        <div class="tooth" id="tooth6"></div>
-        <div class="tooth" id="tooth7"></div>
-        <div class="tooth" id="tooth8"></div>
-        <div class="tooth" id="tooth9"></div>
-        <div class="tooth" id="tooth10"></div>
+        <div class="tooth toothBlank" id="tooth1"></div>
+        <div class="tooth toothBlank" id="tooth2"></div>
+        <div class="tooth toothBlank" id="tooth3"></div>
+        <div class="tooth toothBlank" id="tooth4"></div>
+        <div class="tooth toothBlank" id="tooth5"></div>
+        <div class="tooth toothBlank" id="tooth6"></div>
+        <div class="tooth toothBlank" id="tooth7"></div>
+        <div class="tooth toothBlank" id="tooth8"></div>
+        <div class="tooth toothBlank" id="tooth9"></div>
+        <div class="tooth toothBlank" id="tooth10"></div>
       </div>
 
     </div>
 
     <div id="lostPuzzlePanel">
+      <div id="lostPuzzleText">
+        Verify you are human by pressing the right keys:
+      </div>
       <div id="arrowScreen">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" height="80%" viewBox="0 0 80 80" xml:space="preserve">
           <polyline fill="none" stroke="#FFFFFF" stroke-width="0.2em" stroke-linecap="round" stroke-linejoin="round" points="

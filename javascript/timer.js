@@ -79,11 +79,13 @@ Stopwatch.prototype.subtract = function(seconds) {
   new Audio("resources/error.wav").play();
 }
 
+let stopwatch;
+
 $(document).ready(function() {
   /*
    * Second example, producing 1 counter (counting up to 6 seconds)
    */
-  var stopwatch = new Stopwatch({
+  stopwatch = new Stopwatch({
     'element': $('#timer'),// DOM element
     'paused': false,                    // Status
     'elapsed': 1000 * 60 * 60,          // Current time in milliseconds
@@ -103,10 +105,4 @@ $(document).ready(function() {
       $(this.element).html(formattedTime);
     }
   });
-
-  // stopwatch.stop();
-
-  setTimeout(function(){ stopwatch.subtract(5); }, 2000);
-  setTimeout(function(){ stopwatch.stop(); }, 3000);
-  setTimeout(function(){ stopwatch.start(); }, 6000);
 });

@@ -27,7 +27,9 @@ $(function() {
         $(this).removeClass("toothE").addClass("toothF");
       } else if ($(this).hasClass("toothF")) {
         $(this).removeClass("toothF");
+        // $(this).css("backgroundImage","radial-gradient(#505050,#303030)");
       } else {
+        // $(this).css("backgroundImage","none");
         $(this).addClass("toothA");
       }
 

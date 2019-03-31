@@ -97,27 +97,34 @@ div#mouth_container {
   position: absolute;
   bottom: 0;
 
-  margin: auto;
+  width:70%;
+  left:50%;
+  margin-left:-35%;
+  height: 40%;
 }
 
 div.tooth {
   /* Distribute width over all tooth */
   flex: 1;
 
-  /* TODO: Positioning tooth at bottom of beezee_container */
-
-  padding: 3em;
-  border: 2px solid white;
+  padding: 20%;
+  border: 0.2em solid black;
 }
 
 /* Different tooth classes (A,B,C) give a different color. */
 /* These classes are used to switch between. */
+.toothBlank {
+  background-image: radial-gradient(#505050,#303030);
+}
+
 .toothA {
-  background-color: red;
+  /* background-color: red; */
+  background-image: radial-gradient(#ff3333,#e60000,#330000);
 }
 
 .toothB {
-  background-color: blue;
+  /* background-color: blue; */
+  background-image: radial-gradient(#3333ff,#0000e6,#000033);
 }
 
 .toothC {
@@ -154,6 +161,10 @@ div.tooth {
   box-shadow: 5px 10px 8px black;
 }
 
+#lostPuzzleText {
+  font-size: 12px;
+}
+
 #arrowScreen {
   border: 0.1em solid black;
   width: 70%;
@@ -161,4 +172,15 @@ div.tooth {
   background-color: blue;
   margin: auto;
   margin-top: 5%;
+  text-align: center;
+}
+
+.ui-progressbar-value {
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+}
+
+svg {
+  border: 0px dashed red;
+  margin: 5%;
 }
