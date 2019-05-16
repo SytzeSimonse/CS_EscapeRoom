@@ -128,7 +128,8 @@ div.tooth {
 }
 
 .toothC {
-  background-color: green;
+  /* background-color: green; */
+  background-image: radial-gradient(#33ff33,#00e600,#003300);
 }
 
 .toothD {

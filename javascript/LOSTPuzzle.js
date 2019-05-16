@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  console.log("The 'LOSTPuzzle.js file has loaded.'");
+
   // SVG arrow
   // > ^ < v
   var arrows = [

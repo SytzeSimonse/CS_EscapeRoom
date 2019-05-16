@@ -42,18 +42,17 @@ $(function() {
   var backdoorClosed = true;
 
   // Check if all backdoor conditions are met (true).
-  function backdoorOpen() {
-    if (backdoor_conditions.every(checkTrue) && backdoorClosed) {
-      new Audio("resources/access.mp3").play();
-      backdoorClosed = false;
-      alert("oke");
-      setTimeout(function() {
-        window.location.replace("portal.php");
-      }, 3000);
-    } else {
-      return false;
-    }
-  }
+  // function backdoorOpen() {
+  //   if (backdoor_conditions.every(checkTrue) && backdoorClosed) {
+  //     new Audio("resources/access.mp3").play();
+  //     backdoorClosed = false;
+  //     setTimeout(function() {
+  //       window.location.replace("portal.php");
+  //     }, 3000);
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   window.setInterval(backdoorOpen, 2000);
 

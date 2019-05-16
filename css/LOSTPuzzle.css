@@ -1,0 +1,41 @@
+#lostPuzzlePanel {
+  position: absolute;
+  top: 20%;
+  right: -0.2em;
+  width: 10%;
+  height: 30%;
+  background-color: red;
+  font-size: 3em;
+
+  border: 0.2em solid black;
+  background-color: #404040;
+  background-image: url('../resources/metal2.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire */
+  box-shadow: 5px 10px 8px black;
+}
+
+#lostPuzzleText {
+  font-size: 12px;
+}
+
+#arrowScreen {
+  border: 0.1em solid black;
+  width: 70%;
+  height: 40%;
+  background-color: blue;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.ui-progressbar-value {
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+}
+
+svg {
+  border: 0px dashed red;
+  margin: 5%;
+}

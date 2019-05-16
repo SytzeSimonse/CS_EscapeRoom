@@ -37,6 +37,8 @@ $(function() {
     }
   });
 
+  backdoor_conditions[0] = true;
+
   // Function: checkCorrectTeethCombination. Checks if the teeth are in the right combination.
   function checkCorrectTeethCombination() {
     if

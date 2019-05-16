@@ -34,13 +34,30 @@
       // output data of each row
       while($row = $result->fetch_assoc()) {
         echo "Login succesfull.";
+        $_SESSION['loggedIn'] = true;
       }
     } else {
-      echo "Login unsuccessfull.";
+      echo "
+      <!DOCTYPE html>
+      <html lang='en' dir='ltr'>
+        <head>
+          <meta charset='utf-8'>
+          <title>Failed login</title>
+          <link rel='stylesheet' href='css/portal.css'>
+        </head>
+        <body>
+
+          Login unsuccesfull... You will be directed back to the login portal.
+
+        </body>
+      </html>
+      ";
+
+      // Wait 4 seconds before redirecting to login portal.
+      header("Refresh: 4; url=portal.php");
     }
     $conn->close();
   }
-
   ?>
 </body>
 </html>
