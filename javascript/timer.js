@@ -80,29 +80,3 @@ Stopwatch.prototype.subtract = function(seconds) {
 }
 
 let stopwatch;
-
-$(document).ready(function() {
-  /*
-   * Second example, producing 1 counter (counting up to 6 seconds)
-   */
-  stopwatch = new Stopwatch({
-    'element': $('#timer'),// DOM element
-    'paused': false,                    // Status
-    'elapsed': 1000 * 60 * 60,          // Current time in milliseconds
-    'countingUp': false,                // Counting up or down
-    'timeLimit': 1000 * 6,              // Time limit in milliseconds
-    'updateRate': 100,                  // Update rate, in milliseconds
-    'onTimeUp': function() {            // onTimeUp callback
-      this.stop();
-      $(this.element).html('Countdown finished!');
-    },
-    'onTimeUpdate': function() {        // onTimeUpdate callback
-      var t = this.elapsed,
-          h = ('0' + Math.floor(t / 3600000)).slice(-2),
-          m = ('0' + Math.floor(t % 3600000 / 60000)).slice(-2),
-          s = ('0' + Math.floor(t % 60000 / 1000)).slice(-2);
-      var formattedTime = m + ':' + s;
-      $(this.element).html(formattedTime);
-    }
-  });
-});

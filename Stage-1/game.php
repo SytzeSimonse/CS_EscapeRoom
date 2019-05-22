@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>BEEZEE</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>CS EscapeRoom</title>
+
+    <!-- Incude CSS -->
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- Include JQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <!-- Include JQuery UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -21,17 +24,43 @@
     </script>
 
     <!-- Include external scripts -->
-    <script type="text/javascript" src="javascript/general.js"></script>
-    <script type="text/javascript" src="javascript/openBackdoor.js"></script>
+    <script type="text/javascript" src="../javascript/general.js"></script>
+    <script type="text/javascript" src="../javascript/openBackdoor.js"></script>
 
     <!-- Include puzzle scripts -->
-    <script type="text/javascript" src="javascript/toothPuzzle.js"></script>
-    <script type="text/javascript" src="javascript/keyboardPuzzle.js"></script>
-    <script type="text/javascript" src="javascript/eyePuzzle.js"></script>
+    <script type="text/javascript" src="../javascript/toothPuzzle.js"></script>
+    <script type="text/javascript" src="../javascript/keyboardPuzzle.js"></script>
+    <script type="text/javascript" src="../javascript/eyePuzzle.js"></script>
 
-    <script type="text/javascript" src="javascript/LOSTPuzzle.js"></script>
+    <script type="text/javascript" src="../javascript/timer.js"></script>
 
-    <script type="text/javascript" src="javascript/timer.js"></script>
+    <script>
+      var duration = <?php echo $_POST["duration"]; ?>
+
+      function load() {
+        stopwatch = new Stopwatch({
+          'element': $('#timer'),// DOM element
+          'paused': false,                    // Status
+          'elapsed': 1000 * 60 * duration,          // Current time in milliseconds
+          'countingUp': false,                // Counting up or down
+          'timeLimit': 1000 * 6,              // Time limit in milliseconds
+          'updateRate': 100,                  // Update rate, in milliseconds
+          'onTimeUp': function() {            // onTimeUp callback
+            this.stop();
+            $(this.element).html('Countdown finished!');
+          },
+          'onTimeUpdate': function() {        // onTimeUpdate callback
+            var t = this.elapsed,
+                h = ('0' + Math.floor(t / 3600000)).slice(-2),
+                m = ('0' + Math.floor(t % 3600000 / 60000)).slice(-2),
+                s = ('0' + Math.floor(t % 60000 / 1000)).slice(-2);
+            var formattedTime = m + ':' + s;
+            $(this.element).html(formattedTime);
+          }
+        });
+      }
+      window.onload = load;
+    </script>
 
   </head>
   <body>
@@ -48,7 +77,7 @@
     <!-- The escape room timer -->
     <div id="timer_container">
       <div>Time left</div>
-      <div id="timer">2:00</div>
+      <div id="timer"></div>
     </div>
 
     <!-- Create BEE_ZEE (the robot) -->
