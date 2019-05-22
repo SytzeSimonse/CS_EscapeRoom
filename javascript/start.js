@@ -28,3 +28,9 @@ function checkReady(event) {
     event.returnValue = false;
   }
 }
+
+function updateDurationValue(val) {
+  document.getElementById('durationValue').value=val;
+}
+
+updateDurationValue();

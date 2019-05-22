@@ -20,9 +20,12 @@
         <li>Enable fullscreen mode</li>
         <li>Set a duration (default: 60 minutes)</li>
       </ul>
+      Once you have read the instructions, click on the 'Start!'-button to begin the game.
+      <br><br>
       <form class="" action="Stage-1/game.php" method="post" onsubmit="checkReady(event);">
         Duration (in minutes):<br>
-        <input type="range" name="duration" min="30" max="90" value="60"><br>
+        <input type="range" name="duration" step="5" min="30" max="90" value="60" onchange="updateDurationValue(this.value);"><br>
+        <input type="text" id="durationValue" value=""><br><br>
         <input type="submit" value="Start!"/>
       </form>
     </div>
