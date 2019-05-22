@@ -66,7 +66,7 @@ $(document).ready(function() {
         //Restart timer.
         restart();
       } else {
-        alert("PROBLEEM!");
+        
       }
   };
 

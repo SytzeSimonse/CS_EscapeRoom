@@ -4,6 +4,7 @@ $(document).ready(function() {
   $("#left_eye").click(function () {
     counter++;
 
+    // Press left eye 14 times, then wait for 1,5 seconds.
     if (counter == 14) {
       setTimeout(function() {
         if (counter == 14) {

@@ -133,15 +133,18 @@ div.tooth {
 }
 
 .toothD {
-  background-color: yellow;
+  /* background-color: yellow; */
+  background-image: radial-gradient(#ffff66,#ffff00,#999900);
 }
 
 .toothE {
-  background-color: cyan;
+  /* background-color: cyan; */
+  background-image: radial-gradient(#00cccc, #33ccff);
 }
 
 .toothF {
-  background-color: magenta;
+  /* background-color: magenta; */
+  background-image: radial-gradient(#cc00cc, #ff4dff);
 }
 
 #lostPuzzlePanel {

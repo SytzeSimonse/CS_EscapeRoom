@@ -22,6 +22,7 @@
 
     <!-- Include external scripts -->
     <script type="text/javascript" src="javascript/general.js"></script>
+    <script type="text/javascript" src="javascript/openBackdoor.js"></script>
 
     <!-- Include puzzle scripts -->
     <script type="text/javascript" src="javascript/toothPuzzle.js"></script>
@@ -34,12 +35,6 @@
 
   </head>
   <body>
-
-    <div id="countdown-timer-up">
-      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='20 0 60 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
-      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='30 0 70 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
-      <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5%' height='5%' transform = "rotate(-90)" viewBox='40 0 80 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='0.2em' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8'/></svg>
-    </div>
 
     <!-- The backdoor lights:
     Every time a requirement is met to open the backdoor, a light switches on.
@@ -67,20 +62,21 @@
 
       <!-- FRAME mouth -->
       <div id="mouth_container">
-        <div class="tooth toothBlank" id="tooth1"></div>
-        <div class="tooth toothBlank" id="tooth2"></div>
-        <div class="tooth toothBlank" id="tooth3"></div>
-        <div class="tooth toothBlank" id="tooth4"></div>
-        <div class="tooth toothBlank" id="tooth5"></div>
-        <div class="tooth toothBlank" id="tooth6"></div>
-        <div class="tooth toothBlank" id="tooth7"></div>
-        <div class="tooth toothBlank" id="tooth8"></div>
-        <div class="tooth toothBlank" id="tooth9"></div>
-        <div class="tooth toothBlank" id="tooth10"></div>
+        <div class="tooth toothBlank" id="tooth1">1</div>
+        <div class="tooth toothBlank" id="tooth2">2</div>
+        <div class="tooth toothBlank" id="tooth3">3</div>
+        <div class="tooth toothBlank" id="tooth4">4</div>
+        <div class="tooth toothBlank" id="tooth5">5</div>
+        <div class="tooth toothBlank" id="tooth6">6</div>
+        <div class="tooth toothBlank" id="tooth7">7</div>
+        <div class="tooth toothBlank" id="tooth8">8</div>
+        <div class="tooth toothBlank" id="tooth9">9</div>
+        <div class="tooth toothBlank" id="tooth10">10</div>
       </div>
 
     </div>
 
+    <!--
     <div id="lostPuzzlePanel">
       <div id="lostPuzzleText">
         Verify you are human by pressing the right keys:
@@ -93,6 +89,7 @@
       </div>
       <div id="timerBar"></div>
     </div>
+  -->
 
   </body>
 </html>

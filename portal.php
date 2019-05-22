@@ -70,6 +70,7 @@ if ($_SESSION['portalAccessed']) {
       </div>
     </div>
 
+    <!--
     <div id="lostPuzzlePanel">
       <div id="lostPuzzleText">
         Verify you are human by pressing the right keys:
@@ -82,6 +83,7 @@ if ($_SESSION['portalAccessed']) {
       </div>
       <div id="timerBar"></div>
     </div>
+  -->
 
   </body>
 </html>
