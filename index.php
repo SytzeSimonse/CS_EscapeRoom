@@ -18,14 +18,14 @@
       Before starting the adventure, please read the instructions below carefully.
       <ul>
         <li>Enable fullscreen mode</li>
-        <li>Set a duration (default: 45 minutes)</li>
+        <li>Set a duration (default: 60 minutes)</li>
       </ul>
-      <form class="" action="login.php" method="post">
+      <form class="" action="Stage-1/game.php" method="post" onsubmit="checkReady(event);">
         Duration (in minutes):<br>
-        <input type="range" name="duration" min="30" max="90" value="45">
+        <input type="range" name="duration" min="30" max="90" value="60"><br>
+        <input type="submit" value="Start!"/>
       </form>
     </div>
 
-    Nothing...
   </body>
 </html>
