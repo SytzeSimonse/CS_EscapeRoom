@@ -2,11 +2,11 @@
 
 $_SESSION['portalAccessed'] = false;
 
-if ($_SESSION['portalAccessed']) {
-  echo "portal.php";
-} else {
-  header('Location: game.php');
-}
+// if ($_SESSION['portalAccessed']) {
+//   echo "portal.php";
+// } else {
+//   header('Location: Stage-1/game.php');
+// }
 
 ?>
 

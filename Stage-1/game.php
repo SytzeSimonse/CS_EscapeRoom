@@ -38,7 +38,7 @@
       var duration = <?php echo $_POST["duration"]; ?>
 
       function load() {
-        stopwatch = new Stopwatch({
+          stopwatch = new Stopwatch({
           'element': $('#timer'),// DOM element
           'paused': false,                    // Status
           'elapsed': 1000 * 60 * duration,          // Current time in milliseconds
@@ -65,8 +65,9 @@
   </head>
   <body>
 
-    <!-- The backdoor lights:
-    Every time a requirement is met to open the backdoor, a light switches on.
+  <!--
+    The backdoor lights:
+    Every time a requirement is met to open the backdoor, a light is switched on.
   -->
   <div id="light_container">
     <div class="light" id="light1"></div>

@@ -30,7 +30,9 @@ $(function() {
       new Audio("resources/access.mp3").play();
       backdoorClosed = false;
       setTimeout(function() {
-        window.location.replace("portal.php");
+        // Go to stage 2, portal.
+        window.location.href = '../Stage-2/portal.php';
+        return true;
       }, 3000);
     } else {
       return false;
