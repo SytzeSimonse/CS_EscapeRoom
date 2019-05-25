@@ -55,6 +55,8 @@ div#light_container {
   margin: 2em 0em 0em 2em;
   border-collapse: separate;
   border-spacing: 1em;
+
+  border: 2px solid red;
 }
 
 div.light {
@@ -166,4 +168,10 @@ div.tooth {
 svg {
   border: 0px dashed red;
   margin: 5%;
+}
+
+#backdoorForm {
+  display: none;
+  width: 100%;
+  border: 2px dashed purple;
 }

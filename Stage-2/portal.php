@@ -32,9 +32,6 @@ $_SESSION['portalAccessed'] = false;
     var duration_minutes = <?php echo $_POST["duration_minutes"]; ?>;
 
       function load() {
-          console.log("Load function.");
-          alert("Seconds: "+duration_seconds+", Minutes: "+duration_minutes);
-
           stopwatch = new Stopwatch({
           'element': $('#timer'),// DOM element
           'paused': false,                    // Status
@@ -53,6 +50,9 @@ $_SESSION['portalAccessed'] = false;
                 s = ('0' + Math.floor(t % 60000 / 1000)).slice(-2);
             var formattedTime = m + ':' + s;
             $(this.element).html(formattedTime);
+
+            $("#duration_seconds").val(s);
+            $("#duration_minutes").val(m);
           }
         });
       }
@@ -79,16 +79,14 @@ $_SESSION['portalAccessed'] = false;
       <!-- Login form -->
       <form action="login.php" method="post">
         <b>Username:</b></br>
-        <!-- <select name="dbType">
-          <option>Choose Database Type</option>
-          <option value="oracle">Oracle</option>
-          <option value="mssql">MS SQL</option>
-          <option value="mysql">MySQL</option>
-          <option value="other">Other</option>
-        </select> -->
         <input type="text" name="username" required><br>
         <b>Password:</b></br>
         <input type="text" name="password" required><br><br>
+
+        <!-- Use hidden fields to pass on seconds and minutes on timer. -->
+        <input type="hidden" id="duration_seconds" name="duration_seconds">
+        <input type="hidden" id="duration_minutes" name="duration_minutes">
+
         <input type="submit" name="submit" value="Login!">
       </form>
 

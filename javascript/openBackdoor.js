@@ -1,10 +1,5 @@
 function checkReady(event) {
-  var duration = getElementById('durationValue');
-  if (backdoorOpen()) {
-    event.returnValue = true;
-  } else {
-    event.returnValue = false;
-  }
+
 }
 
 // Define variables for opening backdoor.
@@ -35,16 +30,19 @@ $(function() {
   // Check if all backdoor conditions are met (true).
   function backdoorOpen() {
     if (backdoor_conditions.every(checkTrue) && backdoorClosed) {
-      new Audio("resources/access.mp3").play();
+      new Audio("../resources/sounds/access.mp3").play();
       backdoorClosed = false;
       setTimeout(function() {
-        // Go to stage 2, portal.
+        // Show form.
+        $("#backdoorForm").css({"display":"table-row"});
         return true;
       }, 3000);
     } else {
       return false;
     }
   }
+
+  window.setInterval(backdoorOpen, 1000);
 
   // End of JQuery document ready function.
 });

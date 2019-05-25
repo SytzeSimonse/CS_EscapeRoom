@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+$_SESSION['loggedIn'] = false;
+
+$_SESSION['duration_seconds'] = $_POST["duration_seconds"];
+$_SESSION['duration_minutes'] = $_POST["duration_minutes"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -34,7 +45,11 @@
       // output data of each row
       while($row = $result->fetch_assoc()) {
         echo "Login succesfull.";
+
         $_SESSION['loggedIn'] = true;
+
+        // Wait 4 seconds before redirecting to administration page.
+        header("Refresh: 4; url=../Stage-3/administration.php");
       }
     } else {
       echo "

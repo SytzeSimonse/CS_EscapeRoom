@@ -77,7 +77,7 @@
     <div class="light" id="light2"></div>
     <div class="light" id="light3"></div>
 
-    <form class="" action="../Stage-2/portal.php" method="post" onsubmit="checkReady(event);">
+    <form id="backdoorForm" action="../Stage-2/portal.php" method="post" onsubmit="checkReady(event);">
       <input type="hidden" id="duration_seconds" name="duration_seconds">
       <input type="hidden" id="duration_minutes" name="duration_minutes">
       <input type="submit" value="Go to portal"/>
