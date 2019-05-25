@@ -35,7 +35,7 @@
     <script type="text/javascript" src="../javascript/timer.js"></script>
 
     <script>
-      var duration = <?php echo $_POST["duration"]; ?>
+      var duration = <?php echo $_POST["duration"]; ?>;
 
       function load() {
           stopwatch = new Stopwatch({
@@ -56,6 +56,9 @@
                 s = ('0' + Math.floor(t % 60000 / 1000)).slice(-2);
             var formattedTime = m + ':' + s;
             $(this.element).html(formattedTime);
+
+            $("#duration_seconds").val(s);
+            $("#duration_minutes").val(m);
           }
         });
       }
@@ -73,6 +76,12 @@
     <div class="light" id="light1"></div>
     <div class="light" id="light2"></div>
     <div class="light" id="light3"></div>
+
+    <form class="" action="../Stage-2/portal.php" method="post" onsubmit="checkReady(event);">
+      <input type="hidden" id="duration_seconds" name="duration_seconds">
+      <input type="hidden" id="duration_minutes" name="duration_minutes">
+      <input type="submit" value="Go to portal"/>
+    </form>
   </div>
 
     <!-- The escape room timer -->

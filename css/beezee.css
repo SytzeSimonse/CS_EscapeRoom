@@ -50,27 +50,6 @@ div#eyes_container {
   text-align: center;
 }
 
-/* Timer */
-div#timer_container {
-  background-color: black;
-  border: 0.5em solid #0d0d0d;
-  color: red;
-  font-family: Digital7Mono;
-  text-align: center;
-  width: 20%;
-  padding: 1em;
-
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: -0.5em;
-}
-
-div#timer {
-  font-size: 6em;
-}
-
 div#light_container {
   display: table;
   margin: 2em 0em 0em 2em;

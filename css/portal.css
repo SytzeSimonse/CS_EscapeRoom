@@ -1,21 +1,11 @@
-/* CSS of login portal. */
-
-html, body {
-  font-size: 22px;
-  background-color: black;
-  font-family: monospace;
-  color: white;
-
-  min-height: 100%;
-}
-
+/* CSS of portal. */
 #login-portal_container {
   padding: 1em;
   margin: auto;
-  margin-top: 6em;
+  margin-top: 10%;
   width: 60%;
   border: 0.5em ridge black;
-  background-color: #1a1a1a;
+  background-color: black;
 }
 
 #forgotPassword {

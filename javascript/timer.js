@@ -79,4 +79,9 @@ Stopwatch.prototype.subtract = function(seconds) {
   new Audio("resources/error.wav").play();
 }
 
+Stopwatch.prototype.getElapsed = function() {
+  // Get elapsed time.
+  return this.elapsed;
+}
+
 let stopwatch;

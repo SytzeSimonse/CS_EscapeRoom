@@ -1,3 +1,12 @@
+function checkReady(event) {
+  var duration = getElementById('durationValue');
+  if (backdoorOpen()) {
+    event.returnValue = true;
+  } else {
+    event.returnValue = false;
+  }
+}
+
 // Define variables for opening backdoor.
 // - tooth_broken: Right combination of tooth is given.
 // - keyboard_broken: Right keyboard key is pressed.
@@ -15,7 +24,6 @@ var backdoor_conditions = [
 
 // Place all code in JQuery 'ready'.
 $(function() {
-
   // Function: checkTrue. Checks if a Boolean is true.
   // @boolean boolean: Boolean which is checked.
   function checkTrue(boolean) {
@@ -31,15 +39,12 @@ $(function() {
       backdoorClosed = false;
       setTimeout(function() {
         // Go to stage 2, portal.
-        window.location.href = '../Stage-2/portal.php';
         return true;
       }, 3000);
     } else {
       return false;
     }
   }
-
-  window.setInterval(backdoorOpen, 2000);
 
   // End of JQuery document ready function.
 });
