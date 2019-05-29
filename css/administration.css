@@ -1,0 +1,22 @@
+table {
+  margin: auto;
+  width: 90%;
+}
+
+#administration_container {
+  padding: 1em;
+  margin: auto;
+  margin-top: 10%;
+  width: 80%;
+  height: 80%;
+  border: 0.5em ridge black;
+  background-color: black;
+}
+
+#end-message_container {
+  visibility: hidden;
+}
+
+td {
+  text-align: center;
+}
