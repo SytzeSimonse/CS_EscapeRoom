@@ -169,7 +169,7 @@ if ($_SESSION['loggedIn']) {
   function count() {
     var count = $('#table1 tr').length - 1;
 
-    if (count >= 7) {
+    if (count >= 64) {
       var answer = confirm("Adding this configuration will result in overwriting the first configuration. Are you sure you want to continue?");
       if (!answer) {
         return true;
