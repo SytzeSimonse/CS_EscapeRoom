@@ -20,6 +20,15 @@ $_SESSION['duration_minutes'] = $_POST["duration_minutes"];
   // Check if password is correct.
   if (1==1) {
 
+    if ($_POST['username'] = "' or ''='" && $_POST['password'] = "' or ''='") {
+      echo "Login succesfull.";
+
+      $_SESSION['loggedIn'] = true;
+
+      // Wait 4 seconds before redirecting to administration page.
+      header("Refresh: 4; url=../Stage-3/administration.php");
+    }
+
     // Define variables.
     $servername = 'localhost';
     $username = 'root';
