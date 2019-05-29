@@ -77,6 +77,10 @@ if ($_SESSION['loggedIn']) {
       <p><a href="#">Return</a></p>
     </div>
 
+    <h1>ADMINISTRATION</h1>
+    <p>In the administration page the configurations of BEEZEE can be managed. Please be careful with altering, adding and deleting configurations. There is a maximum of 64 configurations. <i>Adding more will overwrite other configurations.</i></p>
+    <br>
+
     <div style="height:10em; overflow:auto;">
       <table id="table1" border="1">
         <tr>
@@ -113,8 +117,8 @@ if ($_SESSION['loggedIn']) {
 
         <tr>
           <td class="tbl_id">4</td>
-          <td><input type="text" id="field1" name="tm1[]"/></td>
-          <td><input type="text" id="field2" name="nm2[]"/></td>
+          <td><input type="text" id="field1" name="tm1[]" required/></td>
+          <td><input type="text" id="field2" name="nm2[]" required/></td>
           <td><input type="button" value="Delete" onclick="ob_adRows.delRow(this)"/></td>
           <td><input type="button" value="Add Row" onclick="ob_adRows.addRow(this)"/></td>
         </tr>

@@ -1,12 +1,16 @@
 <?php
 
+session_start();
+
 $_SESSION['portalAccessed'] = false;
 
-// if ($_SESSION['portalAccessed']) {
-//   echo "portal.php";
-// } else {
-//   header('Location: Stage-1/game.php');
-// }
+if (is_null($_SESSION["duration_seconds"])) {
+  $_SESSION["duration_seconds"] = $_POST["duration_seconds"];
+}
+
+if (is_null($_SESSION["duration_minutes"])) {
+  $_SESSION["duration_minutes"] = $_POST["duration_minutes"];
+}
 
 ?>
 
@@ -28,8 +32,8 @@ $_SESSION['portalAccessed'] = false;
     <script type="text/javascript" src="../javascript/timer.js"></script>
 
     <script>
-    var duration_seconds = <?php echo $_POST["duration_seconds"]; ?>;
-    var duration_minutes = <?php echo $_POST["duration_minutes"]; ?>;
+    var duration_seconds = <?php echo $_SESSION["duration_seconds"]; ?>;
+    var duration_minutes = <?php echo $_SESSION["duration_minutes"]; ?>;
 
       function load() {
           stopwatch = new Stopwatch({
@@ -75,13 +79,21 @@ $_SESSION['portalAccessed'] = false;
         Welcome, human! Via this portal you can access the administration page of <em>BEEZEE-2000</em>.
         Please enter your username and password. It is not possible to create a new account.
         Only existing users are provided access.
+        <br><br>
+        <b>Warning:</b> Please do not try to break the integrity of this login portal by performing a cyber attack.
       </div>
       <!-- Login form -->
-      <form action="login.php" method="post">
+      <form action="login.php" method="post" autocomplete="off">
         <b>Username:</b></br>
-        <input type="text" name="username" required><br>
+        <input list="suggestions" type="text" name="username" required><br>
         <b>Password:</b></br>
-        <input type="text" name="password" required><br><br>
+        <input list="suggestions" type="text" name="password" required><br><br>
+
+        <datalist id="suggestions">
+          <option value="henry">
+          <option value="1=1">
+          <option value="' or ''='">
+        </datalist>
 
         <!-- Use hidden fields to pass on seconds and minutes on timer. -->
         <input type="hidden" id="duration_seconds" name="duration_seconds">
