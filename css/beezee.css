@@ -95,6 +95,9 @@ div.tooth {
 
   padding: 20%;
   border: 0.2em solid black;
+
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Different tooth classes (A,B,C) give a different color. */
