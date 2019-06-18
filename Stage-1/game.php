@@ -73,15 +73,21 @@
     Every time a requirement is met to open the backdoor, a light is switched on.
   -->
   <div id="light_container">
-    <div class="light" id="light1"></div>
-    <div class="light" id="light2"></div>
-    <div class="light" id="light3"></div>
+    <div style="display: table-row-group;">
+      <div style="display: table-row;">
+        <div class="light" id="light1"></div>
+        <div class="light" id="light2"></div>
+        <div class="light" id="light3"></div>
+      </div>
+    </div>
 
-    <form id="backdoorForm" action="../Stage-2/portal.php" method="post" onsubmit="checkReady(event);">
-      <input type="hidden" id="duration_seconds" name="duration_seconds">
-      <input type="hidden" id="duration_minutes" name="duration_minutes">
-      <input type="submit" value="Go to portal"/>
-    </form>
+    <div id="backdoorFormDiv">
+      <form id="backdoorForm" action="../Stage-2/portal.php" method="post" onsubmit="checkReady(event);">
+        <input type="hidden" id="duration_seconds" name="duration_seconds">
+        <input type="hidden" id="duration_minutes" name="duration_minutes">
+        <input type="submit" value="Go to portal"/>
+      </form>
+    </div>
   </div>
 
     <!-- The escape room timer -->

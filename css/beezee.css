@@ -61,7 +61,7 @@ div#light_container {
   border-collapse: separate;
   border-spacing: 1em;
 
-  /* border: 2px solid red; */
+  width: 20%;
 }
 
 div.light {
@@ -175,8 +175,8 @@ svg {
   margin: 5%;
 }
 
-#backdoorForm {
+#backdoorFormDiv {
+  caption-side: bottom;
   display: none;
-  width: 100%;
-  border: 2px dashed purple;
+  text-align: center;
 }

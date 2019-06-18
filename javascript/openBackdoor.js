@@ -36,8 +36,8 @@ $(function() {
       new Audio("../resources/sounds/access.mp3").play();
       backdoorClosed = false;
       setTimeout(function() {
-        // Show form.
-        $("#backdoorForm").css({"display":"table-row"});
+        // Show form.backdoorForm
+        $("#backdoorFormDiv").css({"display":"table-caption"});
         return true;
       }, 3000);
     } else {
