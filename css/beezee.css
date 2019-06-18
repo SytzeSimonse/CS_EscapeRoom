@@ -44,10 +44,15 @@ div#eyes_container {
 .eye {
   background-image: radial-gradient(circle, white, #000066, #000066, #000066, #000066, #000066);
   border: 0.5em solid black;
-  width: 7em;
-  height: 7em;
-  margin: 2em 9em 8em 9em;
+  width: 15%;
+  height: 6em;
+  margin: 2em 6em 8em 6em;
   text-align: center;
+  display: table-cell;
+}
+
+.eye:active {
+  border: 0.5em solid lime;
 }
 
 div#light_container {
@@ -56,7 +61,7 @@ div#light_container {
   border-collapse: separate;
   border-spacing: 1em;
 
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 div.light {

@@ -15,7 +15,7 @@ var backdoor_conditions = [
   tooth_broken,
   keyboard_broken,
   eye_broken
-]
+];
 
 // Place all code in JQuery 'ready'.
 $(function() {
@@ -30,6 +30,9 @@ $(function() {
   // Check if all backdoor conditions are met (true).
   function backdoorOpen() {
     if (backdoor_conditions.every(checkTrue) && backdoorClosed) {
+
+      console.log(backdoor_conditions);
+
       new Audio("../resources/sounds/access.mp3").play();
       backdoorClosed = false;
       setTimeout(function() {

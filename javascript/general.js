@@ -14,6 +14,6 @@ $(function() {
   }
 
   // Play Morse-code every 2 minutes.
-  playMorse(2,"../resources/morse.wav");
+  playMorse(2,"../resources/sounds/morse.wav");
 
 });

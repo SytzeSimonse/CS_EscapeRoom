@@ -17,7 +17,7 @@
       Welcome to the Computer Science EscapeRoom!
       Before starting the adventure, please read the instructions below carefully.
       <ul>
-        <li>Enable fullscreen mode</li>
+        <li>Enable fullscreen mode (press F11)</li>
         <li>Set a duration (default: 60 minutes)</li>
       </ul>
       Once you have read the instructions, click on the 'Start!'-button to begin the game.

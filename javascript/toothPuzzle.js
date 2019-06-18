@@ -26,8 +26,6 @@ $(function() {
     }
   });
 
-  backdoor_conditions[0] = true;
-
   // Function: checkCorrectTeethCombination. Checks if the teeth are in the right combination.
   function checkCorrectTeethCombination() {
 
@@ -50,23 +48,22 @@ $(function() {
     )
 
     {
-      alert("Tooth puzzle is solved.");
-
       $(".tooth").animate({backgroundColor: "#4E1402"});
-      teethCombinationCorrect = true;
-      tooth_broken = true;
-      new Audio("resources/toothUnlocked.wav").play();
+      // teethCombinationCorrect = true;
+      // tooth_broken = true;
+      new Audio("../resources/sounds/toothUnlocked.wav").play();
       backdoor_conditions[0] = true;
+      console.log(backdoor_conditions);
 
       $(document).ready(function() {
         $("#light1").css("background-image", "radial-gradient(#ff3333,#e60000,#330000)");
       });
 
       setTimeout(function(){
-        new Audio("resources/speech.mp3").play();
+        new Audio("../resources/sounds/speech.mp3").play();
       }, 1000);
     } else {
-      new Audio("resources/toothClick.mp3").play();
+      new Audio("../resources/sounds/toothClick.mp3").play();
     }
   }
 });
